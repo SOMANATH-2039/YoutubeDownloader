@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+  }
+  .items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    height: 100vh;
+  }
+  .container{
+    height: 80px;
+    width: 250px;
+    background-color: #4b4bd1;
+    padding: 3px;
+    border-radius: 50px;
+    box-shadow: 0 0 20px 3px #4b4bd1;
+  }
+  .container:hover{
+    background: linear-gradient(red, green, blue);
+    animation: animation 1.5s linear infinite;
+  }
+  @keyframes animation{
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    100% {
+      filter: hue-rotate(360deg);
+    }
+  }
+  button{
+    height: 80px;
+    width: 250px;
+    background-color: #000;
+    color: #4b4bd1;
+    border: 3px solid transparent;
+    border-radius: 50px;
+    letter-spacing: 9px;
+    font-size: 20px;
+  }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="{% url 'playlist' %}">
+         <button type="button" >Playlist</button>
+        </a>
+        
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <a href="{% url 'single' %}">
+        <button type="button">Single</button>
+        </a>
+    </div>
+</body>
+</html>
