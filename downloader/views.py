@@ -2,10 +2,12 @@
 from django.shortcuts import render, redirect 
 from pytube import *
 import os
+from django.views.decorators.csrf import csrf_exempt
 
 
 DOWNLOAD_DIR='D'
-# defining function 
+# defining function
+@csrf_exempt 
 def playlistYoutube(request): 
 
 	# checking whether request.method is post or not 
@@ -27,7 +29,7 @@ def playlistYoutube(request):
 				# returning HTML page 
 		# 	return render(request, 'youtube.html') 
 	return render(request, 'youtube.html')
-
+@csrf_exempt
 def oneYoutube(request):
 	if request.method =='POST':
 		link = request.POST['link']
