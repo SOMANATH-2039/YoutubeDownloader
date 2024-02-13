@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-n4zvcb=orifn(zg1=(66i#(b*q0-(9@oby549)xw&-_m1n08by
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['youtubedownloader-efr7.onrender.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -126,3 +126,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CSRF_TRUSTED_ORIGINS = [
     'https://youtubedownloader-efr7.onrender.com/'
 ]
+
+CORS_ORIGIN_ALLOW_ALL=True
+
+CSRF_COOKIE_SECURE=True
